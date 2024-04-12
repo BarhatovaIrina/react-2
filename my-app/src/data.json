@@ -1,0 +1,11 @@
+[{
+    "title":" product 1",
+    "price": 149,
+    "discount": 5
+},
+{
+    "title":" product 2",
+    "price": 179,
+    "discount": 15
+}
+]
