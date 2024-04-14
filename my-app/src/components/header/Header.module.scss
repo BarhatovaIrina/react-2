@@ -1,9 +1,15 @@
 .header {
-    background: orange;
+    background: lightsalmon;
     min-height: 100px;
 
 }
 
 .nav {
-    background: green;
+    background: rgb(250, 177, 148);
+    padding: 2.5vw;
+    // gap:2vw;
+    & a{
+        color:white;
+        margin: 0 5px;
+    }
 }

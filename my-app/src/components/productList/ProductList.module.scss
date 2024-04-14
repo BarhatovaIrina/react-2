@@ -1,3 +1,24 @@
 .productList {
+    background: rgb(250, 177, 148);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:80%;
+    gap:2.5vw;
+    padding: 2.5vw;
+    margin:0 auto;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2.5vw;
+}
+.more {
+    width:50%;
+    padding: 1vw;
     background: lightsalmon;
+    border: 0;
+    border-inline: 0;
 }

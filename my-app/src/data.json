@@ -1,11 +1,57 @@
 [{
+    "id":1,
     "title":" product 1",
     "price": 149,
-    "discount": 5
+    "discount": 5,
+    "like":false
 },
 {
+    "id":2,
     "title":" product 2",
-    "price": 179,
-    "discount": 15
+    "price": 79,
+    "discount": 15,
+    "like":false
+},
+{
+    "id":3,
+    "title":" product 3",
+    "price": 129,
+    "discount": 5,
+    "like":false
+},
+{
+    "id":4,
+    "title":" product 4",
+    "price": 449,
+    "discount": 5,
+    "like":false
+},
+{
+    "id":5,
+    "title":" product 5",
+    "price": 129,
+    "discount": 5,
+    "like":false
+},
+{
+    "id":6,
+    "title":" product 6",
+    "price": 449,
+    "discount": 5,
+    "like":false
+},
+{
+    "id":7,
+    "title":" product 7",
+    "price": 129,
+    "discount": 5,
+    "like":false
+},
+{
+    "id":8,
+    "title":" product 8",
+    "price": 449,
+    "discount": 5,
+    "like":false
 }
 ]
