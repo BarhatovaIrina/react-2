@@ -5,12 +5,21 @@ import { useEffect, useState } from "react";
 
 const ProductList = () => {
     const [products,setProducts]=useState([]);
-    const [visibleCount, setVisibleCount] = useState(2);
+
+    const [visibleCount, setVisibleCount] = useState(3);
+
+
+    const [counter, setCounter]=useState(0);
+
+    const handleCounter = ()=> {
+        setCounter(counter+1);
+    }
 
     const handleShowMore = () => {
-        setVisibleCount(prevCount => prevCount + 2);
+        setVisibleCount(prevCount => prevCount + 3);
     };
-    useEffect (()=> {
+
+    useEffect(()=> {
         setProducts(data);
     },[])
 
@@ -22,12 +31,16 @@ const ProductList = () => {
             return item;
         });
         setProducts(updatedProducts);
-        // console.log(products);
     }
-    const deleteProduct = (id)=> {
-        const updatedProducts = products.filter(item => item.id !== id);
+   
+    // const deleteProduct = (id) =>{
+    //     const updatedProducts = products.filter ((item)=> item.id!==id);
+    //     setProducts(updatedProducts);
+    // }
+
+    const deleteProduct = (id)=>{
+        const updatedProducts = products.filter((item)=> item.id!==id);
         setProducts(updatedProducts);
-        // console.log('del', id);
     }
 
     return (
@@ -36,7 +49,6 @@ const ProductList = () => {
 
         <div className={styles.productList}>
         {products.slice(0, visibleCount).map((item) => (
-                    // <div key={item.id} onClick={() => changeLike(item.id)}>
                     <div key={item.id} >
                         <Product product={item} deleteProduct={deleteProduct} changeLike={changeLike}/>
                     </div>
@@ -46,6 +58,10 @@ const ProductList = () => {
         {visibleCount < products.length && (
             <button onClick={handleShowMore} className={styles.more}>Еще</button>
         )}
+
+        {/* <button onClick={()=>{setCounter(counter+1)}}>click {counter}</button> */}
+        
+        <button onClick={handleCounter}>click {counter}</button>
         </div>
         
     );
